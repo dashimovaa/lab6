@@ -25,18 +25,18 @@ print(output_list)
 
 print('\t\t\tTask 3')
 #task 3
-def get_date_in_format(input_date):
-
-    parsed_date = datetime.strptime(input_date, "%Y.%m.%d")
-    
-    # Format the date as "day.month.year"
-    formatted_date = parsed_date.strftime("%d.%m.%Y")
-    
+def get_date_in_format(date): #преобразовать дату из одного формата в другой
+    parts = date.split(".") #разделить входную дату на части (по точкам)
+    day = parts[2] 
+    month = parts[1]
+    year = parts[0]
+    formatted_date = f"{day}.{month}.{year}"
     return formatted_date
 
+
 input_date = "2023.10.23"
-output_date = get_date_in_format(input_date)
-print(output_date)
+result = get_date_in_format(input_date)
+print(result)  
 
 print('\t\t\tTask 4')
 #Task 4
